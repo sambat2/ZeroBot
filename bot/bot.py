@@ -48,7 +48,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
             return await update.message.reply_text("⏳ Please wait before sending again.")
         
         # Try sending the image with a full path for better clarity
-        image_path = "ZeroBot/bot/qrcode.png"
+        image_path = "bot/qrcode.png"
         try:
             await update.message.reply_photo(open(image_path, 'rb'))
         except Exception as e:
