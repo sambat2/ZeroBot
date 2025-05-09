@@ -48,9 +48,9 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
             return await update.message.reply_text("⏳ Please wait before sending again.")
         
         # Try sending the image with a full path for better clarity
-        image_path = "bot/qrcode.png"
+        #image_path = "qrcode.png"
         try:
-            await update.message.reply_photo(open(image_path, 'rb'))
+            await update.message.reply_photo(open('qrcode.png', 'rb'))
         except Exception as e:
             logging.error(f"Error sending photo: {e}")
             return await update.message.reply_text("❌ Failed to send the photo. Please try again later.")
